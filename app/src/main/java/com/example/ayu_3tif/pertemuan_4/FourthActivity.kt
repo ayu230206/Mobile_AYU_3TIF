@@ -2,6 +2,7 @@ package com.example.ayu_3tif.pertemuan_4
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -9,6 +10,8 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.ayu_3tif.MainActivity
 import com.example.ayu_3tif.R
 import com.example.ayu_3tif.databinding.ActivityFourthBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 
 class FourthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFourthBinding
@@ -25,11 +28,41 @@ class FourthActivity : AppCompatActivity() {
 
             insets
         }
+        val name = intent.getStringExtra("name")
+        val from = intent.getStringExtra("from")
+        val age = intent.getIntExtra("age",0)
+        Log.w("Data Intent","Nama: $name , Usia: $age, Asal: $from")
 
         binding.btnKembali.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
+        binding.btnShowSnackbar.setOnClickListener {
+            Snackbar.make(binding.root, "Ini adalah Snackbar", Snackbar.LENGTH_SHORT)
+                .setAction("Tutup"){
+                    Log.e("Info Snackbar","Snackbar ditutup")
+                }
+                .show()
+        }
+        binding.btnShowAlertDialog.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Konfirmasi")
+                .setMessage("Apakah Anda yakin ingin Keluar?")
+                .setPositiveButton("Ya") { dialog, _ ->
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    dialog.dismiss()
+                    Log.e("Info Dialog","Anda memilih Ya!")
+                }
+                .setNegativeButton("Batal") { dialog, _ ->
+                    dialog.dismiss()
+                    Log.e("Info Dialog","Anda memilih Tidak!")
+                }
+                .show()
+        }
+
+
     }
 }
