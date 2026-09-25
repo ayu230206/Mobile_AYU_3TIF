@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Ayu_3TIF</string>
+    <string name="deskripsi">
+        Ayu nur Habibah
+    </string>
+    <string name="verif">
+        Verification
+    </string>
+    <string name="berhasil">
+        Kode berhasil dikirim
+    </string>
+    <string name="periksa">
+        Silahkan periksa nomor anda
+    </string>
+</resources>
