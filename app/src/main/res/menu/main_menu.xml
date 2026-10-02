@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--
+        ifRoom:
+        Menampilkan menu sebagai IKON langsung di Toolbar/Action Bar JIKA ruang layar masih cukup.
+        Jika ruang layar penuh/sempit, menu ini otomatis dimasukkan ke dalam menu titik tiga (overflow menu).
+    -->
+    <item
+        android:id="@+id/action_search"
+        android:title="Search"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="Settings"
+        android:icon="@android:drawable/ic_menu_preferences"
+        app:showAsAction="never" />
+<!--
+        never:
+        SELALU menyembunyikan menu di dalam menu titik tiga (overflow menu) sebagai teks.
+        Menu ini TIDAK AKAN PERNAH muncul sebagai ikon langsung di Toolbar, meskipun ruang layar masih sangat luas.
+     -->
+</menu>

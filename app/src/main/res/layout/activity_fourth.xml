@@ -41,10 +41,12 @@
                 android:id="@+id/btnShowSnackbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
                 android:backgroundTint="#75CA16"
                 android:text="Show Snackbar"
-                tools:layout_editor_absoluteX="51dp"
-                tools:layout_editor_absoluteY="150dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn1" />
 
             <Button
                 android:id="@+id/btnShowAlertDialog"

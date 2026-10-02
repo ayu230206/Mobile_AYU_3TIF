@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.ayu_3tif.databinding.ActivityMainBinding
 import com.example.ayu_3tif.pertemuan_4.FourthActivity
+import com.example.ayu_3tif.pertemuan_5.FifthActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -24,10 +25,19 @@ class MainActivity : AppCompatActivity() {
 
             insets
         }
-
+// Tombol Pertemuan 4
         binding.btnToFourth.setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
-            /*tambahkan bagian berikut*/
+            intent.putExtra("name", "Politeknik Caltex Riau")
+            intent.putExtra("from", "Rumbai")
+            intent.putExtra("age", 25)
+
+            startActivity(intent)
+        }
+
+// Tombol Pertemuan 5
+        binding.btnToFifth.setOnClickListener {
+            val intent = Intent(this, FifthActivity::class.java)
             intent.putExtra("name", "Politeknik Caltex Riau")
             intent.putExtra("from", "Rumbai")
             intent.putExtra("age", 25)
