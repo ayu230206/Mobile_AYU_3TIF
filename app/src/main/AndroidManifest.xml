@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-<!--    memasukan semua permision music, internet, dll-->
+
+    <!-- memasukan semua permision music, internet, dll -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ayu_3TIF">
         <activity
-            android:name=".MainActivity"
+            android:name=".AuthActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -41,6 +42,10 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".pertemuan_5.WebViewActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".MainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

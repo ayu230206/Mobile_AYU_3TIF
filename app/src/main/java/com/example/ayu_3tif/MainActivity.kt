@@ -9,7 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.ayu_3tif.databinding.ActivityMainBinding
 import com.example.ayu_3tif.pertemuan_4.FourthActivity
 import com.example.ayu_3tif.pertemuan_5.FifthActivity
-
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
@@ -43,6 +43,19 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("age", 25)
 
             startActivity(intent)
+        }
+        binding.btnLogout.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Konfirmasi")
+                .setMessage("Apakah Anda yakin ingin keluar?")
+                .setPositiveButton("Ya") { dialog, _ ->
+                    dialog.dismiss()
+                    finish() // Menutup MainActivity
+                }
+                .setNegativeButton("Batal") { dialog, _ ->
+                    dialog.dismiss()
+                }
+                .show()
         }
     }
 }
