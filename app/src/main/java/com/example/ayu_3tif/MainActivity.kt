@@ -10,6 +10,7 @@ import com.example.ayu_3tif.databinding.ActivityMainBinding
 import com.example.ayu_3tif.pertemuan_4.FourthActivity
 import com.example.ayu_3tif.pertemuan_5.FifthActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
@@ -22,39 +23,45 @@ class MainActivity : AppCompatActivity() {
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-
             insets
         }
-// Tombol Pertemuan 4
+
+        // Tombol Pertemuan 4
         binding.btnToFourth.setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
             intent.putExtra("name", "Politeknik Caltex Riau")
             intent.putExtra("from", "Rumbai")
             intent.putExtra("age", 25)
-
             startActivity(intent)
         }
 
-// Tombol Pertemuan 5
+        // Tombol Pertemuan 5
         binding.btnToFifth.setOnClickListener {
             val intent = Intent(this, FifthActivity::class.java)
             intent.putExtra("name", "Politeknik Caltex Riau")
             intent.putExtra("from", "Rumbai")
             intent.putExtra("age", 25)
-
             startActivity(intent)
         }
+
+        // Tombol Logout
         binding.btnLogout.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Konfirmasi")
                 .setMessage("Apakah Anda yakin ingin keluar?")
                 .setPositiveButton("Ya") { dialog, _ ->
+                    val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
+
                     dialog.dismiss()
-                    finish() // Menutup MainActivity
+
+                    var intent = Intent(this, AuthActivity::class.java)
+                    startActivity(intent)
+                    finish()
                 }
-                .setNegativeButton("Batal") { dialog, _ ->
-                    dialog.dismiss()
-                }
+                .setNegativeButton("Batal") { dialog, _ -> dialog.dismiss() }
                 .show()
         }
     }
