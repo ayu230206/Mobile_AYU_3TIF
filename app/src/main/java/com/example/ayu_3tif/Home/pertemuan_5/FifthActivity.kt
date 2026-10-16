@@ -1,4 +1,4 @@
-package com.example.ayu_3tif.pertemuan_5
+package com.example.ayu_3tif.Home.pertemuan_5
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,7 +11,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.ayu_3tif.R
 import com.example.ayu_3tif.databinding.ActivityFifthBinding
-import com.example.ayu_3tif.databinding.ActivityFourthBinding
 
 class FifthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFifthBinding

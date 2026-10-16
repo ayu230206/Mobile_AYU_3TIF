@@ -7,8 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.ayu_3tif.databinding.ActivityMainBinding
-import com.example.ayu_3tif.pertemuan_4.FourthActivity
-import com.example.ayu_3tif.pertemuan_5.FifthActivity
+import com.example.ayu_3tif.Home.pertemuan_4.FourthActivity
+import com.example.ayu_3tif.Home.pertemuan_5.FifthActivity
+import com.example.ayu_3tif.Home.pertemuan_7.SeventhActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -41,6 +42,11 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("name", "Politeknik Caltex Riau")
             intent.putExtra("from", "Rumbai")
             intent.putExtra("age", 25)
+            startActivity(intent)
+        }
+        // Tombol Pertemuan 7
+        binding.btnToSeventh.setOnClickListener {
+            val intent = Intent(this, SeventhActivity::class.java)
             startActivity(intent)
         }
 

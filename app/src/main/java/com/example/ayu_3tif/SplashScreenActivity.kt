@@ -21,9 +21,9 @@ class SplashScreenActivity : AppCompatActivity() {
 
             var intent: Intent
             if (isLogin) {
-                intent = Intent(this@SplashScreenActivity, MainActivity::class.java)
+                intent = Intent(this@SplashScreenActivity, BaseActivity::class.java)
             } else {
-                intent = Intent(this@SplashScreenActivity, AuthActivity::class.java)
+                intent = Intent(this@SplashScreenActivity, BaseActivity::class.java)
             }
 
             startActivity(intent)
