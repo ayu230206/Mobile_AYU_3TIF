@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4DB6AC"
+    tools:context=".Message.tutorial.Tutorial3Fragment">
+
+    <ImageView
+        android:id="@+id/ivTutorial3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="148dp"
+        android:contentDescription="Icon Tutorial 3"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitleTutorial3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Mulai Gunakan Sekarang"
+        android:textColor="#333333"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivTutorial3" />
+
+    <TextView
+        android:id="@+id/tvDescTutorial3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:gravity="center"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="Jelajahi fitur pesan dan temukan informasi penting dari komunitas pengguna. Fitur ini dirancang simpel, cepat, dan mudah dipahami"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleTutorial3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
