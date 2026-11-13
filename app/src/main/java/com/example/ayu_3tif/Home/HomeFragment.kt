@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ayu_3tif.AuthActivity
 import com.example.ayu_3tif.Home.pertemuan_10.TenthActivity
+import com.example.ayu_3tif.Home.pertemuan_11.EleventhActivity
 import com.example.ayu_3tif.Home.pertemuan_4.FourthActivity
 import com.example.ayu_3tif.Home.pertemuan_5.FifthActivity
 import com.example.ayu_3tif.Home.pertemuan_7.SeventhActivity
@@ -60,6 +61,11 @@ class HomeFragment : Fragment() {
         // Tombol Pertemuan 10
         binding.btnToTenth.setOnClickListener {
             val intent = Intent(requireContext(), TenthActivity::class.java)
+            startActivity(intent)
+        }
+        // Tombol Pertemuan 10
+        binding.btnToEleventh.setOnClickListener {
+            val intent = Intent(requireContext(), EleventhActivity::class.java)
             startActivity(intent)
         }
 

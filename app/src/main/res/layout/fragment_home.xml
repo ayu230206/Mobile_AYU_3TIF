@@ -22,7 +22,7 @@
     <View
         android:id="@+id/background_header"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="300dp"
         android:background="@drawable/bg_header_wave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,6 +84,14 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#C72F63"
             android:text="Pertemuan_10"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+        <Button
+            android:id="@+id/btnToEleventh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#8BC34A"
+            android:text="Pertemuan_11"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
